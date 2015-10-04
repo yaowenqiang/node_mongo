@@ -34,3 +34,9 @@ exports.test = function(){
         });
 
 }
+exports.list = function(req,res){
+    var query = Phantomjs.find();
+    query.exec(function(err,results){
+         res.render('index',{title:'lists',list:results});
+    });
+};

@@ -3,11 +3,12 @@
  * GET home page.
  */
 var standupCtrl = require('../controllers/standup.server.controller');
+var phantomsjsCtrl = require('../controllers/phantomjs.server.controller');
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+    //  res.render('index', { title: 'Express' });
+    return phantomsjsCtrl.list(req,res);
 };
 
-var phantomsjsCtrl = require('../controllers/phantomjs.server.controller');
 exports.test = function(req, res){
         return phantomsjsCtrl.test(req,res);
 };
