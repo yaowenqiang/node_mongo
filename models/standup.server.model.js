@@ -11,7 +11,7 @@ var standupSchema = new Schema({
 });
 
 // disable _id
-var noIdSchema = new Schemaj({
+var noIdSchema = new Schema({
     name:String,
 },{_id:false});
 
