@@ -9,6 +9,12 @@ var express = require('express')
   , http = require('http')
   , path = require('path');
 
+// Mongoose OCM...
+var mongoose = require("mongoose");
+
+// connect to the database
+mongoose.connect('mongodb://localhost:27017/demodb');
+
 var app = express();
 // assign the swig view engine to .html files...
 var swig = require('swig');
